@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Tektur&display=swap');
+* {
+      margin: 0;
+      padding: 0;
+    }
+  
+    body {
+      font-family: 'Tektur', cursive;
+       background-image: linear-gradient(to bottom right, black, #Cfff04);
+      margin: 0; /* Reset default margin */
+    }
