@@ -8,4 +8,5 @@
       font-family: 'Tektur', cursive;
        background-image: linear-gradient(to bottom right, black, #Cfff04);
       margin: 0; /* Reset default margin */
+       background-repeat: no-repeat;
     }
