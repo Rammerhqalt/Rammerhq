@@ -8,32 +8,41 @@
 </style>
 </head>
 <body>
-<nav class="navbar">
-<a href="#" style="text-decoration: none;">
-<div class="navbar-logo">RammmerCenter</div>
-</a>
-</nav>
- <div style="display: flex; align-items: center;">
-      <button class="navbar-toggle" onclick="toggleMenu()">
-        <span class="navbar-toggle-icon"></span>
-        <span class="navbar-toggle-icon"></span>
-        <span class="navbar-toggle-icon"></span>
-      </button>
-<div class="navbar-links" id="navbarLinks">
- <a href="index.html" class="fa-solid fa-house"></a>
-    <a href="game.html" class="fa-solid fa-gamepad"></a>
-</div>
-</div>
+
     <style>
-         .h1 {
+         h1.a {
     font-size: 800px;
     color: white;
     font-weight: bold;
+    margin: auto;
+    width: 50%;
+    height: 50%;
   }
+         .btn{
+
+  border: white 1px;
+  color: #ffff; 
+  padding: 10px 24px; 
+  cursor: pointer; 
+  width: 50%; 
+  display:block; 
+  text-align:center;
+  font-size: 2rem;
+}
+
+.btn-group button:not(:last-child) {
+  border-bottom: 40px; 
+}
+.btn-group button:hover {
+    text-decoration:underline;
+}
+.btn-rounded{
+border-radius: 10px;
+}
     </style>
-    <h1>
-        Coming soon to github
-    </h1>
+    <h1>Coming soon to github</h1>
+    <a href="index.html" class="btn btn-rounded">Home</a>
+    <a href="game.html" class="btn btn-rounded">Games</a>
 </body>
 </html>
 
