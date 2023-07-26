@@ -6,9 +6,10 @@
   
     body {
       font-family: 'Tektur', cursive;
-      background-image: linear-gradient(to bottom right, black, #Cfff04, 100%)
-      height: 100%
-      margin: 0; /* Reset default margin */
+      background-color: #ffff;
+      background-image: linear-gradient(to bottom right, black, #Cfff04,);
       background-repeat: no-repeat;
-      background-attatchment: fixed;
+      background-size: cover;
+      width: 100%;
+      height: 100%;
       }
