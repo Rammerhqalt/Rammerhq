@@ -131,6 +131,23 @@ border-radius: 10px;
 }
       </style>
     <script>
+function toggleMenu() {
+    const navbarLinks = document.getElementById('navbarLinks');
+    navbarLinks.classList.toggle('show');
+  }
+
+  function hideMenu() {
+    const navbarLinks = document.getElementById('navbarLinks');
+    navbarLinks.classList.remove('show');
+  }
+
+  window.addEventListener('resize', function() {
+    const screenWidth = window.innerWidth;
+    if (screenWidth > 600) {
+      hideMenu();
+    }
+  });
+        
     const gameCards = {
      "title": "Among Us",
         "image": "https://i.ibb.co/CW2Wmh0/run2.jpg",
