@@ -10,7 +10,7 @@
 <body>
 
     <style>
-         h1.a {
+         h1 {
     font-size: 200px;
     border: solid white 5px;
     color: #ffff;
@@ -21,7 +21,7 @@
   }
          .btn{
 
-  border: white 1px;
+  border: solid white 5px;
   color: #ffffff; 
   padding: 10px 24px; 
   cursor: pointer; 
@@ -44,6 +44,251 @@ border-radius: 10px;
     </style>
     <a href="index.html" class="btn btn-rounded">Home</a>
     <a href="game.html" class="btn btn-rounded">Games</a>
+    <h1>Home</h1>
+    <style>
+        .wrapper
+  .clock
+    .clock-circles
+      - for (i = 0; i < 3; i++)
+        .clock-circles__item
+        
+      .clock-circles__item
+        - for (i = 0; i < 5; i++)
+          .wave
+          
+    .clock-indicators
+      - for (i = 0; i < 8; i++)
+        .clock-indicators__item
+        
+    .clock-times
+      .clock-times__second
+      .clock-times__minute
+      .clock-times__hour
+          </style>
+    <style>
+        * {
+  box-sizing: border-box;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f3fbff;
+}
+
+.clock {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  position: relative;
+
+  &-circles {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    position: relative;
+    font-size: 300px;
+    // box-shadow: 0px 20px 40px 0px rgba(72, 30, 202, 0.3);
+
+    &__item {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 1em;
+      height: 1em;
+      font-size: 100%;
+
+      &:nth-child(1) {
+        background-image: linear-gradient(
+          to bottom,
+          #00c0ff,
+          #ffcf00,
+          #fc4f4f,
+          #0e22c3
+        );
+        box-shadow: 0px 30px 40px 0px rgba(72, 30, 202, 0.2);
+      }
+
+      &:nth-child(2) {
+        background-image: linear-gradient(to bottom, #027fff, #491bc9);
+        font-size: 95%;
+        box-shadow: 0px 10px 20px 0px rgba(42, 17, 121, 0.5);
+      }
+
+      &:nth-child(3) {
+        font-size: 80%;
+        box-shadow: inset 0px 20px 40px rgba(0, 0, 0, 0.1),
+          inset 0px 0px 40px rgba(37, 13, 105, 0.55), 0px 5px 0px #5430ff,
+          0px -1px 0px 3px rgba(14, 29, 169, 0.35);
+      }
+
+      &:nth-child(4) {
+        background: #3349c9;
+        font-size: 35px;
+        box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, 0.2),
+          inset 0px 0px 20px 1px rgba(54, 21, 148, 0.3);
+
+        .wave {
+          position: absolute;
+          width: 1em;
+          height: 1em;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          border-radius: 50%;
+          border: 1px solid #fff;
+          font-size: 100%;
+
+          &:nth-child(1) {
+            opacity: 0;
+          }
+
+          &:nth-child(2) {
+            font-size: 210%;
+            opacity: 0.1;
+          }
+
+          &:nth-child(3) {
+            font-size: 320%;
+            opacity: 0.1;
+          }
+
+          &:nth-child(4) {
+            font-size: 430%;
+            opacity: 0.1;
+          }
+
+          &:nth-child(5) {
+            font-size: 600%;
+            opacity: 0.3;
+            border-color: #321e9a;
+          }
+        }
+      }
+    }
+  }
+}
+
+.clock-indicators {
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  border-radius: 50%;
+  &__item {
+    position: absolute;
+    left: calc(50% - 2px);
+    width: 2px;
+    // background: #f4eed7;
+    -webkit-transform-origin: bottom center;
+    transform-origin: bottom center;
+    z-index: 2;
+    border-radius: 1px;
+    // border-top: 7px solid #fff;
+    background: none;
+    height: 108px;
+    top: 10px;
+    opacity: 0.5;
+
+    &:after {
+      content: "";
+      position: absolute;
+      width: 2px;
+      height: 7px;
+      background: #fff;
+      left: 0;
+      top: 0;
+      border-radius: 10px;
+    }
+
+    &:nth-child(1),
+    &:nth-child(3),
+    &:nth-child(5),
+    &:nth-child(7) {
+      opacity: 1;
+      // border-top: 12px solid #f4eed7;
+      width: 8px;
+      &:after {
+        height: 10px;
+        width: 6px;
+      }
+    }
+
+    @for $i from 1 through 60 {
+      &:nth-of-type(#{$i}) {
+        transform: rotateZ(calc(45deg * #{$i}));
+      }
+    }
+  }
+}
+
+.clock-times {
+  position: absolute;
+  width: 70%;
+  height: 70%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+
+  &__second,
+  &__minute,
+  &__hour {
+    position: absolute;
+    left: calc(50% - 1px);
+    width: 2px;
+    background: #f4eed7;
+    transform-origin: bottom center;
+    top: 5px;
+    z-index: 2;
+    border-radius: 1px;
+  }
+
+  &__second {
+    height: 90px;
+    margin-top: 10px;
+    animation: time 2s linear infinite;
+    z-index: 3;
+    background-image: linear-gradient(to top, #e45753 0%, #ca09e8 100%);
+    width: 3px;
+    border-radius: 50px;
+  }
+  &__minute {
+    height: 80px;
+    margin-top: 20px;
+    opacity: 0.75;
+    // transform: rotateZ(220deg);
+    animation: time 20s linear infinite;
+    animation-delay: -35s;
+  }
+  &__hour {
+    height: 70px;
+    margin-top: 30px;
+    // transform: rotateZ(280deg);
+    width: 5px;
+    border-radius: 50px;
+    box-shadow: 3px 1px 6px -1px rgba(10, 21, 53, 0.45);
+    animation: time 60s linear infinite;
+    animation-delay: -20s;
+  }
+}
+
+@keyframes time {
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+
+    </style>
 </body>
 </html>
 
