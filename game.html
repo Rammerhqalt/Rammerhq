@@ -131,60 +131,7 @@ border-radius: 10px;
     <a href="index.html" class="btn btn-rounded">Home</a>
     <a href="game.html" class="btn btn-rounded">Games</a>
     <h1>Games</h1>
-    <script>
-function toggleMenu() {
-    const navbarLinks = document.getElementById('navbarLinks');
-    navbarLinks.classList.toggle('show');
-  }
-
-  function hideMenu() {
-    const navbarLinks = document.getElementById('navbarLinks');
-    navbarLinks.classList.remove('show');
-  }
-
-  window.addEventListener('resize', function() {
-    const screenWidth = window.innerWidth;
-    if (screenWidth > 600) {
-      hideMenu();
-    }
-  });
-        const gameCards = {
-            "card3": {
-        "title": "Basketball Stars",
-        "image": "https://i.ibb.co/zSS8hYC/basketballstats.jpg",
-        "url": "gme/basketballstars.html"
-      },
-            "card2": {
-        "title": "Awsome Tanks 2",
-        "image": "https://i.ibb.co/tpd7b6j/awesometanks2.jpg",
-        "url": "gme/awesomesause2.html"
-      },
-            "card1": {
-        "title": "Among Us",
-        "image": "https://i.ibb.co/CW2Wmh0/run2.jpg",
-        "url": "gme/basketofamangos.html",
-         },
-        };
-        const sortedCards = {};
-    Object.keys(gameCards)
-      .sort((a, b) => gameCards[a].title.localeCompare(gameCards[b].title))
-      .forEach((key, index) => {
-        sortedCards[`card${index + 1}`] = gameCards[key];
-      });
-
-    const cardContainer = document.querySelector('.card-container');
-    Object.keys(sortedCards).forEach(key => {
-      const card = sortedCards[key];
-      const cardElement = document.createElement('a');
-      cardElement.classList.add('card');
-      cardElement.href = card.url;
-      cardElement.innerHTML = `
-        <img src="${card.image}" alt="${card.title}">
-        <h2>${card.title}</h2>
-      `;
-      cardContainer.appendChild(cardElement);
-    });
-    </script>
+    <a href="awesomesause2.html" src="https://i.ibb.co/tpd7b6j/awesometanks2.jpg" class="btn btn-rounded">Awesome Tanks 2</a>
 </body>
 </html>
 
