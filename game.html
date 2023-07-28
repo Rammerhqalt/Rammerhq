@@ -148,16 +148,13 @@ function toggleMenu() {
       hideMenu();
     }
   });
-        
-    const gameCards = {
-         "card1": {
+        const gameCards = {
+        "card1": {
         "title": "Among Us",
         "image": "https://i.ibb.co/CW2Wmh0/run2.jpg",
         "url": "gme/basketofamangos.html",
          },
         };
-       
-        //Sort
         const sortedCards = {};
     Object.keys(gameCards)
       .sort((a, b) => gameCards[a].title.localeCompare(gameCards[b].title))
