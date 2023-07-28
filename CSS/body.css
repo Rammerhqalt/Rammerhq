@@ -6,8 +6,9 @@
   
     body {
       font-family: 'Tektur', cursive;
-      font-color: #fffff;
-      background-image: linear-gradient(to bottom right, black, #Cfff04,)  width: 100%,
+      font-color: #ffff;
+      background-color: #ffff;  
+      width: 100%,
       height: 100%;
       background-repeat: no-repeat;
       }
