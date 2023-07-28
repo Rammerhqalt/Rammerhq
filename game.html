@@ -10,9 +10,10 @@
 
   <style>
      
-      h1.a {
+      h1 {
+    border: solid white, 5px;
     font-size: 200px;
-    color: #ffff;
+    font-color: #ffff;
     font-weight: bold;
     margin: auto;
     width: 50%;
@@ -129,7 +130,7 @@ border-radius: 10px;
       </style>
     <a href="index.html" class="btn btn-rounded">Home</a>
     <a href="game.html" class="btn btn-rounded">Games</a>
-    <h2>Games</h2>
+    <h1>Games</h1>
     <script>
 function toggleMenu() {
     const navbarLinks = document.getElementById('navbarLinks');
@@ -149,7 +150,8 @@ function toggleMenu() {
   });
         
     const gameCards = {
-     "title": "Among Us",
+         "card1": {
+        "title": "Among Us",
         "image": "https://i.ibb.co/CW2Wmh0/run2.jpg",
         "url": "gme/basketofamangos.html"
     },
