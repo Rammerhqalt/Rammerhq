@@ -49,7 +49,7 @@ border-radius: 10px;
   border: 1px solid #ffff;
   box-shadow: 0px 0px 5px #Cfff04;
   padding: 20px;
-  width: 150px;
+  width: 220px;
   height: 220px;
   text-align: center;
   font-size: 16px;
@@ -131,12 +131,34 @@ border-radius: 10px;
 }
       </style>
   <h1>Coming soon</h1>
-     const gameCards = {
+    <script>
+    const gameCards = {
      "title": "Run 2",
         "image": "https://i.ibb.co/CW2Wmh0/run2.jpg",
         "url": "/gme/run2.html"
     },
       };
+        //Sort
+        const sortedCards = {};
+    Object.keys(gameCards)
+      .sort((a, b) => gameCards[a].title.localeCompare(gameCards[b].title))
+      .forEach((key, index) => {
+        sortedCards[`card${index + 1}`] = gameCards[key];
+      });
+
+    const cardContainer = document.querySelector('.card-container');
+    Object.keys(sortedCards).forEach(key => {
+      const card = sortedCards[key];
+      const cardElement = document.createElement('a');
+      cardElement.classList.add('card');
+      cardElement.href = card.url;
+      cardElement.innerHTML = `
+        <img src="${card.image}" alt="${card.title}">
+        <h2>${card.title}</h2>
+      `;
+      cardContainer.appendChild(cardElement);
+    });
+    </script>
 </body>
 </html>
 
