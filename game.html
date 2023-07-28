@@ -43,8 +43,100 @@
 .btn-rounded{
 border-radius: 10px;
 }
+      /*rest of CSS*/
+      .card {
+  background-color: #0C134F;
+  border: 1px solid #ffff;
+  box-shadow: 0px 0px 5px #;
+  padding: 20px;
+  width: 150px;
+  height: 220px;
+  text-align: center;
+  font-size: 16px;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  display: inline-block;
+  color: #000000;
+  margin-bottom: 20px;
+  float: left;
+  margin-right: 20px;
+  border-radius: 10px;
+  transform: scale(1);
+  transition: transform 0.2s ease-in-out;
+  overflow: hidden;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+.card img {
+  max-width: 100%;
+  max-height: 80%;
+  object-fit: contain;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.card h2 {
+  margin-top: 0;
+  font-size: 18px;
+  color: #D4ADFC;
+  margin-bottom: 5px;
+}
+
+.card p {
+  margin-bottom: 0;
+  font-size: 16px;
+  color: #D4ADFC;
+  height: 30%;
+}
+
+.card:before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  width: calc(100% + 20px);
+  height: calc(100% + 20px);
+  z-index: -1;
+  border-radius: 15px;
+  transition: transform 0.2s ease-in-out;
+  transform-origin: 0% 0%;
+  box-sizing: border-box;
+}
+
+.card:hover:before {
+  transform: scale(1.1);
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  perspective: 1000px;
+}
+
+.card {
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+}
+
+.card:hover {
+  transform: scale(1.1) translate(-10px, -10px);
+  z-index: 1;
+  cursor: pointer;
+  text-decoration: none;
+}
       </style>
   <h1>Coming soon</h1>
+     const gameCards = {
+     "title": "Run 2",
+        "image": "https://i.ibb.co/CW2Wmh0/run2.jpg",
+        "url": "/gme/run2.html"
+    },
+      };
 </body>
 </html>
 
