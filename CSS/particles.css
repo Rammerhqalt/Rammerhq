@@ -22,17 +22,7 @@ $time-4: 200s;
 }
 
 /* Styles */
-html, body {
-  height: 100%;
-}
 
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 4rem;
-  overflow: hidden;
-}
 
 .page-bg, .animation-wrapper {
   position: fixed;
