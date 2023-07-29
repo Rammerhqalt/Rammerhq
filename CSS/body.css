@@ -5,6 +5,7 @@
     }
   
     body {
+      cursor: url(‘Rammerhq/img/Cursor-Arrow-PNG-Transparent-Image.png’), auto;
       font-family: 'Tektur', cursive;
       font-color: #ffff;
       background: linear-gradient(#000000, skyblue);  
