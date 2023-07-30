@@ -5,7 +5,7 @@
     <script src="JS/cusor.js"></script>
     <link rel="stylesheet" href="CSS/body.css"/>
     <link rel="stylesheet" href="CSS/nav.css"/>
-    <title>//🏠 | Home</title>
+    <title>//❓ | 404</title>
     <link rel="icon" type="images/x-icon" href="img/circle-transparent-blue.png">
 </head>
 <body>
@@ -60,24 +60,31 @@
   padding: 10px 24px; 
   cursor: pointer; 
   width: 50%; 
-  display: block; 
+  display: inline; 
   text-align:center;
   font-size: 2rem;
 }
-.btn:hover {   
+.btn:hover {  
+    border: solid skyblue 5px;
     color: skyblue;
     transition: text-color ease 0.5s;
+    transition: border ease 0.5s;
 }
       
 .btn-rounded{
 border-radius: 10px;
 }
+.center {
+margin: 0;
+position: absolute;
+left: 50%;
+right: 50%;
 
     </style>
     
     <h1>404</h1>
-     <h2>Im so Sorry But this is the wrong page</h2>
-      <a href="index.html" class="btn btn-rounded">🏠 | Home</a>
+     <h2>Im so Sorry but this is the wrong page</h2>
+      <a href="index.html" class="btn btn-rounded center">🏠 | Home</a>
    
 </body>
 </html>
