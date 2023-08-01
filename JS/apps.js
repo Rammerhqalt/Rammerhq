@@ -11,7 +11,7 @@
       
   
     // JS to take content from a json file and display it on the cards and enable link redirection
-    fetch('')
+    fetch('/JSON/apps.json')
       .then(response => response.json())
       .then(data => {
         const gamesContainer = document.querySelector('.apps');
@@ -33,7 +33,7 @@
             game.addEventListener("click", () => {
               localStorage.setItem('currentapp', `/uv/service/${item.src}`);
               localStorage.setItem('currenttitle', item.title);
-              window.location.href = '/apps-load.html';
+              window.location.href = '';
             });
           });
         }
