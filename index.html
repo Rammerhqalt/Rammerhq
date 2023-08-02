@@ -103,7 +103,35 @@ display: inline;
 align-items: center;
 }
        
-          
+  .nav-click{
+background-color: white;
+  text-align: center;
+  color: #000000; 
+  padding: 10px 24px; 
+  cursor: pointer; 
+  width: 50%; 
+  display: inline; 
+  text-align:center;
+  font-size: 2rem;
+}
+.nav-click:hover {   
+    background-color: skyblue;
+    transition: text-color ease 0.5s;
+}
+      
+.nav-click-rounded{
+border-radius: 10px;
+} 
+     .nav-on {
+    background-color: skyblue; 
+    padding: 10px 24px; 
+    cursor: pointer; 
+    width: 50%; 
+    display:inline; 
+    text-align:center;
+    font-size: 2rem;
+    top: 50px;
+      }
     .btn-on {
     color: skyblue; 
     padding: 10px 24px; 
@@ -131,9 +159,10 @@ align-items: center;
     </style>
     <div class="nav">
     <li>&nbsp</li>
-    <a href="index.html" class="btn btn-rounded btn-on">🏠 | Home</a>
-    <a href="game.html" class="btn btn-rounded">🎮 | Games</a>
-    <a href="about.html" class="btn btn-rounded right">📖 | About</a>
+    <a href="index.html" class="nav-click nav-click-rounded nav-on">🏠 | Home</a>
+    <a href="game.html" class="nav-click nav-click-rounded nav-on">🎮 | Games</a>
+    <a href="about.html" class="nav-click nav-click-rounded nav-on">📖 | About</a>
+    <li>&nbsp</li>
     </div>
     <li>&nbsp</li>
     <li>&nbsp</li>
