@@ -16,30 +16,27 @@ https://cdn.jsdelivr.net/npm/tsparticles@2.12.0/tsparticles.bundle.min.js
    <script src="https://cdn.jsdelivr.net/npm/tsparticles-preset-stars@2/tsparticles.preset.stars.bundle.min.js"></script>
     <style>
       
-   @keyframes slidInLeft {
+   @keyframes rotate {
         from {
-            transform: translateX(-300px);
+            transform: rotate(0deg);
         }
        to {
-           transform: translateX(0px);
+           transform: rotate(360deg);
        }
    }
-        h3 {
+        rotate-img {
             animation-name: slidInLeft;
-            animation-duration:2s;
+            animation-duration:4s;
             animation-timing-function: ease-in-out;
             animation-delay: 0s;
-            animation-iteration-count:1;
+            animation-iteration-count:infinite;
             text-align: center;
             border: solid white 5px;
             border-radius: 100%;
             background-color: black;
-            font-size: 200px;
-            color: #ffffff;
-            font-weight: bold;
             margin: auto;
-            width: 50%;
-            height: 50%;
+            width: 200px;
+            height: 200px;
   }
          li {
   list-style-type: none;
@@ -152,6 +149,9 @@ center2 {
      <li>&nbsp</li>
      <h1>Home</h1>
      <li>&nbsp</li>
+    <div class="rotate-img">
+    <img src="https://i.ibb.co/Xb1m5Fs/logo.png"></img>
+    </div>
     <h2>Awsome Game Website Hosted On Github</h2>
     <li>&nbsp</li>
     <li>&nbsp</li>
