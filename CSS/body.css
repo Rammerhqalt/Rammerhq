@@ -25,5 +25,21 @@
         left: 0;
         top: 0;
     }
-
+iframe {
+        display:block;
+  border: solid white 30px;
+  border-radius:30px;
+  object-align: center;
+  position:fixed; 
+  top:70; 
+  left:35; 
+  bottom:35; 
+  right:35; 
+  width:90%; 
+  height:80%; 
+  margin:0; 
+  padding:0; 
+  overflow:hidden; 
+  z-index:999999;
+}
      
