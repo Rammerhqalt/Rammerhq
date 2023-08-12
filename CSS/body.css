@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&family=Tektur&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 * {
       margin: 0;
       padding: 0;
     }
   
     body {
-     font-family: 'Comic Neue', Tektur;
+     font-family: 'Press Start 2p';
       font-color: #ffff;
       background-color: #000000;
       width: 100%,
