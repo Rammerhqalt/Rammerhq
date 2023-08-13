@@ -58,3 +58,12 @@ iframe {
         border-radius: 50px;
         object-fit: cover;
       }
+h2 {
+    text-align:center;
+    font-size: 50px;
+    color: #ffff;
+    font-weight: bold;
+    margin: auto;
+    width: 50%;
+    height: 50%;
+  }
