@@ -44,4 +44,17 @@ iframe {
   overflow:hidden; 
   z-index:999999;
 }
-     
+        img {
+        width: 265px;
+        height: 265px;
+        border-radius: 50px;
+        object-fit: cover;
+        border: solid #000000 10px;
+      }
+      img:hover {
+        border: solid #8B0000 10px;
+        width: 265px;
+        height: 265px;
+        border-radius: 50px;
+        object-fit: cover;
+      }
