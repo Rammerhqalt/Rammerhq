@@ -14,6 +14,7 @@
       height: 100%;
       background-repeat: no-repeat;
       background-attachment: fixed;
+      cursor: url(https://i.ibb.co/RNYy5Mw/cursor.jpg), pointer;
       }
 .nav {
         background-color: #8B0000;
