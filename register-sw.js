@@ -2,7 +2,7 @@
 /**
  * Distributed with Ultraviolet and compatible with most configurations.
  */
-const stockSW = "/static/uv-sw.js";
+const stockSW = "/assets/uv/uv-sw.js";
 
 /**
  * List of hostnames that are allowed to run serviceworkers on http:
@@ -31,7 +31,7 @@ async function registerSW() {
 /**
  * Distributed with Ultraviolet and compatible with most configurations.
  */
-const stockSW = "/static/uv-sw.js";
+const stockSW = "/assets/uv/uv-sw.js";
 
 /**
  * List of hostnames that are allowed to run serviceworkers on http:
