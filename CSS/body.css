@@ -5,16 +5,26 @@
       margin: 0;
       padding: 0;
     }
-  
+  @keyframes pulse {
+   background:radial-gradient:(circle at center, #000000, #8B0000);
+      background:radial-gradient:(circle at center, #000000, #ABCEBA, #8B0000);
+  }
     body {
-     font-family: 'Exo 2', sans-serif;
+        animation-name: pulse;
+        animation-duration: 1s;
+        animation-timing-function: ease-in;
+        animation-delay: 0.5s;
+        animation-interation-count: infinate;
+        animation-direction:normal;
+        animation-fill-mode:none;
+      font-family: 'Exo 2', sans-serif;
       font-color: #ffff;
-      background:radial-gradient(circle at center, #000000, #ABCEBA, #8B0000);
       width: 100%,
       height: 100%;
       background-repeat: no-repeat;
       background-attachment: fixed;
-      cursor: url(https://i.ibb.co/RNYy5Mw/cursor.jpg);
+      
+      cursor: url('https://i.ibb.co/RNYy5Mw/cursor.jpg');
       }
 .nav {
         width: 100%;
