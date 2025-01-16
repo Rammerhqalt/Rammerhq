@@ -1,12 +1,33 @@
-const proxyUrl = 'http://your-proxy-url.com'; // your proxy URL
-const targetUrl = 'http://target-url.com'; // the URL you want to load via the proxy
+<script>
+  function unblockWebsite(iframeId) {
+   
+    let iframe = document.getElementById(iframeId);
 
-// Create a new iframe
-const iframe = document.createElement('iframe');
-iframe.src = `${proxyUrl}?url=${ encodeURIComponent(targetUrl) }`; // Set the src attribute to include the target URL
-iframe.frameBorder = '0'; // Optional: to display the iframe with the default frame border
-iframe.width = '100%'; // Optional: sets the iframe width
-iframe.height = '500'; // Optional: sets the iframe height
+    
+    let newIframe = document.createElement('iframe');
+    newIframe.src = iframe.src;
+    newIframe.frameBorder = '0';
+    newIframe.width = '100%';
+    newIframe.height = '100%';
+    newIframe.id = iframeId + '_new';
+    newIframe.allow = 'accelerometer; camera; gyroscope; magnetometer; microphone;';
+    newIframe.sandbox = 'allow-scripts allow-same-origin';
 
-// Add the iframe to the document
-document.body.appendChild(iframe);
+    
+    iframe.parentNode.replaceChild(newIframe, iframe);
+
+ 
+    let newIframe2 = document.getElementById(iframeId + '_new');
+
+   
+    newIframe2.addEventListener('load', function() {
+       
+        newIframe2.sandbox = '';
+        newIframe2.allow = '';
+
+        
+        newIframe2.src = iframe.src;
+    });
+}
+</script>
+<iframe src="https://www.tiktok.com/foryou?lang=en" sandbox="allow-scripts" width="100%" height="600" style="border: none;"></iframe>
