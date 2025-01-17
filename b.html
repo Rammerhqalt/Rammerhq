@@ -1,33 +1,37 @@
 <script>
-  function unblockWebsite(iframeId) {
-   
-    let iframe = document.getElementById(iframeId);
-
-    
-    let newIframe = document.createElement('iframe');
-    newIframe.src = iframe.src;
-    newIframe.frameBorder = '0';
-    newIframe.width = '100%';
-    newIframe.height = '100%';
-    newIframe.id = iframeId + '_new';
-    newIframe.allow = 'accelerometer; camera; gyroscope; magnetometer; microphone;';
-    newIframe.sandbox = 'allow-scripts allow-same-origin';
-
-    
-    iframe.parentNode.replaceChild(newIframe, iframe);
-
- 
-    let newIframe2 = document.getElementById(iframeId + '_new');
-
-   
-    newIframe2.addEventListener('load', function() {
-       
-        newIframe2.sandbox = '';
-        newIframe2.allow = '';
-
-        
-        newIframe2.src = iframe.src;
+// Function to unblock a website in an iframe
+function unblockWebsite(iframe, url) {
+    // Create a proxy to fetch the content of the blocked website
+    const proxy = new Proxy(url, {
+        get: (target, property) => {
+            return function(...args) {
+                // Create an XML HTTP request object
+                const xhr = new XMLHttpRequest();
+                
+                // Set the request method and headers
+                xhr.open('GET', target + '/' + property, true);
+                xhr.setRequestHeader('Content-Type', 'text/html; charset=UTF-8');
+                
+                // Override the response text to allow cross-origin access
+                xhr.addEventListener('load', () => {
+                    const response = xhr.responseText;
+                    // Replace the iframe content with the fetched content
+                    iframe.src = 'data:text/html,' + encodeURIComponent(response);
+                });
+                
+                // Send the request
+                xhr.send();
+            };
+        }
     });
+    
+    // Set the src attribute of the iframe to the proxy
+    iframe.src = 'http://localhost:0.0.0.0/proxy?url=' + encodeURIComponent(url);
 }
+
+// Example usage:
+const iframe = document.getElementById('iframe');
+const url = 'https://zombsroyale.io'; // Replace with the blocked website URL
+unblockWebsite(iframe, url);
 </script>
-<iframe src="https://www.tiktok.com/foryou?lang=en" sandbox="allow-scripts" width="100%" height="600" style="border: none;"></iframe>
+<iframe id="iframe" style="width: 100%; height: 100%;"></iframe>
